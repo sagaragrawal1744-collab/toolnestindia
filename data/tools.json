@@ -1,0 +1,121 @@
+[
+  {
+    "name": "CGPA Calculator",
+    "icon": "🎓",
+    "category": "Student",
+    "url": "tools/cgpa-calculator.html"
+  },
+  {
+    "name": "Attendance Calculator",
+    "icon": "📅",
+    "category": "Student",
+    "url": "tools/attendance-calculator.html"
+  },
+  {
+    "name": "Password Generator",
+    "icon": "🔐",
+    "category": "Developer",
+    "url": "tools/password-generator.html"
+  },
+  {
+    "name": "QR Generator",
+    "icon": "📱",
+    "category": "Developer",
+    "url": "tools/qr-generator.html"
+  },
+  {
+    "name": "JSON Formatter",
+    "icon": "🧾",
+    "category": "Developer",
+    "url": "tools/json-formatter.html"
+  },
+  {
+    "name": "Word Counter",
+    "icon": "✍️",
+    "category": "Utility",
+    "url": "tools/word-counter.html"
+  },
+  {
+  "name": "Age Calculator",
+  "icon": "🎂",
+  "category": "Utility",
+  "url": "tools/age-calculator.html"
+},
+{
+  "name": "EMI Calculator",
+  "icon": "💰",
+  "category": "Finance",
+  "url": "tools/emi-calculator.html"
+},
+{
+  "name": "Percentage Calculator",
+  "icon": "📊",
+  "category": "Student",
+  "url": "tools/percentage-calculator.html"
+},
+{
+  "name": "GST Calculator",
+  "icon": "💸",
+  "category": "Finance",
+  "url": "tools/gst-calculator.html"
+},
+{
+  "name": "Date Calculator",
+  "icon": "📅",
+  "category": "Utility",
+  "url": "tools/date-calculator.html"
+},{
+  "name": "Image Compressor",
+  "icon": "🗜️",
+  "category": "Image",
+  "url": "tools/image-compressor.html"
+},
+{
+  "name": "Image to PDF Converter",
+  "icon": "📷",
+  "category": "PDF",
+  "url": "tools/image-to-pdf.html"
+},
+{
+  "name": "Unit Converter",
+  "icon": "🔄",
+  "category": "Utility",
+  "url": "tools/unit-converter.html"
+},
+{
+  "name": "Text Case Converter",
+  "icon": "🔠",
+  "category": "Text",
+  "url": "tools/text-case-converter.html"
+},
+{
+  "name": "QR Scanner",
+  "icon": "📷",
+  "category": "Utility",
+  "url": "tools/qr-scanner.html"
+},
+{
+  "name": "Scientific Calculator",
+  "icon": "🧮",
+  "category": "Calculator",
+  "url": "tools/scientific-calculator.html"
+},
+{
+  "name": "PDF Merger",
+  "icon": "📄",
+  "category": "PDF",
+  "url": "tools/pdf-merger.html"
+},
+{
+  "name": "JPG ↔ PNG Converter",
+  "icon": "🖼️",
+  "category": "Image",
+  "url": "tools/image-converter.html"
+},
+{
+  "name": "Countdown Timer",
+  "icon": "⏳",
+  "category": "Utility",
+  "url": "tools/countdown-timer.html"
+}
+]

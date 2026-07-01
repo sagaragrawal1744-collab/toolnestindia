@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Free QR Code Generator - Create QR Codes Online | ToolNest India
+    </title>
+
+    <meta
+        name="description"
+        content="Generate QR codes instantly for links, text, phone numbers and more. Free online QR code generator with download option.">
+
+    <meta
+        name="keywords"
+        content="qr code generator, free qr code generator, create qr code online">
+
+    <meta
+        name="author"
+        content="Sagar Agrawal">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/qr-generator.html">
+
+<meta property="og:title" content="QR Code Generator - ToolNest India">
+<meta property="og:description" content="Create QR codes instantly for URLs, text and more.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/qr-generator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QR Code Generator - ToolNest India">
+<meta name="twitter:description" content="Create QR codes instantly for URLs, text and more.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"QR Code Generator",
+      "applicationCategory":"UtilityApplication",
+      "author":{
+        "@type":"Person",
+        "name":"Sagar Agrawal"
+      }
+    }
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container-custom nav-container">
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container-custom">
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        >
+        <a href="../index.html">Tools</a>
+        >
+        QR Code Generator
+    </div>
+
+    <h1 class="page-title">
+        QR Code Generator
+    </h1>
+
+    <p class="page-description">
+        Create QR codes instantly for websites, text, phone numbers and more.
+    </p>
+
+    <div class="tool-card">
+
+        <input
+            type="text"
+            id="qrText"
+            placeholder="Enter URL or Text"
+            class="tool-input">
+
+        <button
+            class="btn-primary"
+            onclick="generateQR()">
+            Generate QR Code
+        </button>
+
+        <div id="qr-box"></div>
+
+        <a
+            id="downloadBtn"
+            class="btn-primary"
+            style="display:none;margin-top:20px;text-decoration:none;"
+            download="qrcode.png">
+            Download QR Code
+        </a>
+
+    </div>
+
+    <section class="tool-content">
+
+        <h2>What is a QR Code Generator?</h2>
+
+        <p>
+            A QR Code Generator creates QR codes that users can scan using smartphones to open websites, save contact details or access information instantly.
+        </p>
+
+        <h2>Why Use QR Codes?</h2>
+
+        <ul>
+            <li>Easy sharing of links.</li>
+            <li>Useful for businesses and students.</li>
+            <li>Works on almost every smartphone.</li>
+            <li>Fast and convenient.</li>
+        </ul>
+
+    </section>
+
+    <section class="faq">
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+        <div class="card">
+            <h3>Is this QR generator free?</h3>
+            <p>Yes, completely free.</p>
+        </div>
+
+        <div class="card">
+            <h3>Do you store my QR codes?</h3>
+            <p>No. Everything is generated in your browser.</p>
+        </div>
+
+        <div class="card">
+            <h3>Can I download the QR code?</h3>
+            <p>Yes, you can download it as an image.</p>
+        </div>
+
+    </section>
+
+    <section class="tool-content">
+
+        <h2>Related Tools</h2>
+
+        <ul>
+            <li><a href="password-generator.html">Password Generator</a></li>
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="json-formatter.html">JSON Formatter</a></li>
+        </ul>
+
+    </section>
+
+</div>
+
+<footer>
+    <div class="container-custom">
+        © 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+    </div>
+</footer>
+
+<script>
+
+function generateQR(){
+
+    const text =
+        document.getElementById(
+            "qrText"
+        ).value.trim();
+
+    const qrBox =
+        document.getElementById(
+            "qr-box"
+        );
+
+    const downloadBtn =
+        document.getElementById(
+            "downloadBtn"
+        );
+
+    qrBox.innerHTML = "";
+
+    if(text === ""){
+        alert(
+            "Please enter text or URL."
+        );
+        return;
+    }
+
+    QRCode.toCanvas(
+        text,
+        {
+            width:250
+        },
+        function(error, canvas){
+
+            if(error){
+                console.error(error);
+                return;
+            }
+
+            qrBox.appendChild(
+                canvas
+            );
+
+            downloadBtn.style.display =
+                "inline-block";
+
+            downloadBtn.href =
+                canvas.toDataURL(
+                    "image/png"
+                );
+        }
+    );
+}
+
+</script>
+
+</body>
+</html>

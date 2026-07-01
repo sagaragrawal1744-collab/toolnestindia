@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Image Compressor - Compress Images Online for Free | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Compress JPG, PNG and WebP images online for free. Reduce image size instantly without installing any software.">
+
+<meta
+name="keywords"
+content="image compressor, compress image online, reduce image size, photo compressor">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/image-compressor.html">
+
+<meta property="og:title" content="Image Compressor - ToolNest India">
+<meta property="og:description" content="Compress images online without losing quality.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/image-compressor.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Compressor - ToolNest India">
+<meta name="twitter:description" content="Compress images online without losing quality.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Image Compressor",
+"applicationCategory":"MultimediaApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2><li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Image Compressor
+</div>
+
+<h1 class="page-title">
+Image Compressor
+</h1>
+
+<p class="page-description">
+Compress JPG, PNG and WebP images instantly and reduce file size.
+</p>
+
+<div class="tool-card">
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+class="tool-input">
+
+<label>
+Compression Quality
+</label>
+
+<input
+type="range"
+id="quality"
+min="10"
+max="100"
+value="70"
+class="tool-input">
+
+<p id="qualityText">
+70%
+</p>
+
+<button
+class="btn-primary"
+onclick="compressImage()">
+Compress Image
+</button>
+
+<div id="image-result">
+
+</div>
+
+<a
+id="downloadBtn"
+class="btn-primary"
+style="display:none;text-decoration:none;margin-top:20px;"
+download="compressed-image.jpg">
+Download Image
+</a>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is an Image Compressor?</h2>
+
+<p>
+An Image Compressor reduces image file size while maintaining acceptable quality.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Reduce upload time.</li>
+<li>Save storage space.</li>
+<li>Improve website speed.</li>
+<li>Compress images for email and social media.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this image compressor free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Are my images uploaded to a server?</h3>
+<p>No. Everything happens inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Which formats are supported?</h3>
+<p>JPG, PNG and WebP.</p>
+</div>
+
+<div class="card">
+<h3>Will image quality decrease?</h3>
+<p>Some quality reduction may occur depending on compression level.</p>
+</div>
+
+<div class="card">
+<h3>Can I compress large images?</h3>
+<p>Yes, depending on your browser memory.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully mobile responsive.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="qr-generator.html">QR Code Generator</a></li>
+<li><a href="word-counter.html">Word Counter</a></li>
+<li><a href="image-to-pdf.html">Image to PDF</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+document.getElementById(
+"quality"
+).addEventListener(
+"input",
+function(){
+document.getElementById(
+"qualityText"
+).innerText =
+this.value + "%";
+}
+);
+
+function compressImage(){
+
+const file =
+document.getElementById(
+"imageInput"
+).files[0];
+
+if(!file){
+alert(
+"Please select an image."
+);
+return;
+}
+
+const quality =
+document.getElementById(
+"quality"
+).value / 100;
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(e){
+
+const img =
+new Image();
+
+img.onload =
+function(){
+
+const canvas =
+document.createElement(
+"canvas"
+);
+
+canvas.width =
+img.width;
+
+canvas.height =
+img.height;
+
+const ctx =
+canvas.getContext(
+"2d"
+);
+
+ctx.drawImage(
+img,
+0,
+0
+);
+
+const compressed =
+canvas.toDataURL(
+"image/jpeg",
+quality
+);
+
+document.getElementById(
+"image-result"
+).innerHTML =
+`
+<img
+src="${compressed}"
+style="
+max-width:100%;
+border-radius:20px;
+margin-top:20px;
+">
+`;
+
+const downloadBtn =
+document.getElementById(
+"downloadBtn"
+);
+
+downloadBtn.href =
+compressed;
+
+downloadBtn.style.display =
+"inline-block";
+};
+
+img.src =
+e.target.result;
+};
+
+reader.readAsDataURL(
+file
+);
+
+}
+
+</script>
+
+</body>
+</html>

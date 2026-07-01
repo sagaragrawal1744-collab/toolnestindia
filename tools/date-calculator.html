@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Date Calculator - Days Between Dates Calculator | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free Date Calculator to calculate days between two dates, add days to a date and find date differences instantly.">
+
+<meta
+name="keywords"
+content="date calculator, days between dates, date difference calculator, add days to date">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/date-calculator.html">
+
+<meta property="og:title" content="Date Calculator - ToolNest India">
+<meta property="og:description" content="Calculate the difference between dates instantly.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/date-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Date Calculator - ToolNest India">
+<meta name="twitter:description" content="Calculate the difference between dates instantly.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Date Calculator",
+"applicationCategory":"UtilityApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Date Calculator
+</div>
+
+<h1 class="page-title">
+Date Calculator
+</h1>
+
+<p class="page-description">
+Calculate the number of days between two dates instantly.
+</p>
+
+<div class="tool-card">
+
+<label>Start Date</label>
+
+<input
+type="date"
+id="startDate"
+class="tool-input">
+
+<label>End Date</label>
+
+<input
+type="date"
+id="endDate"
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="calculateDates()">
+Calculate Difference
+</button>
+
+<div id="date-result">
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a Date Calculator?</h2>
+
+<p>
+A Date Calculator helps you calculate the exact number of days, weeks, months and years between two dates.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Calculate age differences.</li>
+<li>Track project durations.</li>
+<li>Calculate days until events.</li>
+<li>Plan trips and schedules.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>How do I calculate days between dates?</h3>
+<p>Select two dates and the calculator automatically finds the difference.</p>
+</div>
+
+<div class="card">
+<h3>Can I calculate future dates?</h3>
+<p>Yes, you can use any valid dates.</p>
+</div>
+
+<div class="card">
+<h3>Is this calculator accurate?</h3>
+<p>Yes, it uses your browser's date functions for accurate calculations.</p>
+</div>
+
+<div class="card">
+<h3>Can I use it for project planning?</h3>
+<p>Yes, it is useful for tracking deadlines and schedules.</p>
+</div>
+
+<div class="card">
+<h3>Is this tool free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Is my data stored?</h3>
+<p>No. Everything runs in your browser.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="age-calculator.html">Age Calculator</a></li>
+<li><a href="emi-calculator.html">EMI Calculator</a></li>
+<li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+function calculateDates(){
+
+const start =
+new Date(
+document.getElementById(
+"startDate"
+).value
+);
+
+const end =
+new Date(
+document.getElementById(
+"endDate"
+).value
+);
+
+if(
+isNaN(start) ||
+isNaN(end)
+){
+alert(
+"Please select both dates."
+);
+return;
+}
+
+const difference =
+Math.abs(
+end - start
+);
+
+const days =
+Math.floor(
+difference /
+(1000 * 60 * 60 * 24)
+);
+
+const weeks =
+Math.floor(
+days / 7
+);
+
+const months =
+Math.floor(
+days / 30.44
+);
+
+const years =
+Math.floor(
+days / 365.25
+);
+
+document.getElementById(
+"date-result"
+).innerHTML =
+`
+<h2>${days} Days</h2>
+
+<p>${weeks} Weeks</p>
+
+<p>${months} Months</p>
+
+<p>${years} Years</p>
+`;
+}
+
+</script>
+
+</body>
+</html>

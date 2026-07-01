@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Scientific Calculator - Free Online Scientific Calculator | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free online scientific calculator with trigonometric functions, logarithms, square roots, powers and more.">
+
+<meta
+name="keywords"
+content="scientific calculator, online calculator, engineering calculator, math calculator">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/scientific-calculator.html">
+
+<meta property="og:title" content="Scientific Calculator - ToolNest India">
+<meta property="og:description" content="Perform advanced mathematical calculations online for free.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/scientific-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scientific Calculator - ToolNest India">
+<meta name="twitter:description" content="Perform advanced mathematical calculations online for free.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Scientific Calculator",
+"applicationCategory":"EducationalApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Scientific Calculator
+</div>
+
+<h1 class="page-title">
+Scientific Calculator
+</h1>
+
+<p class="page-description">
+Perform advanced mathematical calculations instantly.
+</p>
+
+<div class="calculator">
+
+<input
+type="text"
+id="display"
+readonly>
+
+<div class="calculator-grid">
+
+<button onclick="clearDisplay()">AC</button>
+<button onclick="deleteLast()">⌫</button>
+<button onclick="append('%')">%</button>
+<button onclick="append('/')">÷</button>
+<button onclick="append('*')">×</button>
+
+<button onclick="append('7')">7</button>
+<button onclick="append('8')">8</button>
+<button onclick="append('9')">9</button>
+<button onclick="append('-')">-</button>
+<button onclick="sqrt()">√</button>
+
+<button onclick="append('4')">4</button>
+<button onclick="append('5')">5</button>
+<button onclick="append('6')">6</button>
+<button onclick="append('+')">+</button>
+<button onclick="power()">x²</button>
+
+<button onclick="append('1')">1</button>
+<button onclick="append('2')">2</button>
+<button onclick="append('3')">3</button>
+<button onclick="sin()">sin</button>
+<button onclick="cos()">cos</button>
+
+<button onclick="append('0')">0</button>
+<button onclick="append('.')">.</button>
+<button onclick="tan()">tan</button>
+<button onclick="log()">log</button>
+<button onclick="calculate()">=</button>
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a Scientific Calculator?</h2>
+
+<p>
+A scientific calculator performs advanced mathematical operations including trigonometric functions, logarithms, powers and square roots.
+</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Basic arithmetic operations</li>
+<li>Square root calculations</li>
+<li>Power calculations</li>
+<li>Trigonometric functions</li>
+<li>Logarithmic calculations</li>
+<li>Mobile friendly interface</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this calculator free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Can I use it for engineering calculations?</h3>
+<p>Yes, it supports many scientific operations.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully responsive.</p>
+</div>
+
+<div class="card">
+<h3>Is my calculation history stored?</h3>
+<p>No, nothing is stored.</p>
+</div>
+
+<div class="card">
+<h3>Can I calculate trigonometric values?</h3>
+<p>Yes, sin, cos and tan are supported.</p>
+</div>
+
+<div class="card">
+<h3>Does it support decimal calculations?</h3>
+<p>Yes, decimal calculations are fully supported.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+<li><a href="unit-converter.html">Unit Converter</a></li>
+<li><a href="cgpa-calculator.html">CGPA Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+const display =
+document.getElementById(
+"display"
+);
+
+function append(value){
+display.value += value;
+}
+
+function clearDisplay(){
+display.value = "";
+}
+
+function deleteLast(){
+display.value =
+display.value.slice(0,-1);
+}
+
+function calculate(){
+try{
+display.value =
+eval(display.value);
+}
+catch{
+display.value = "Error";
+}
+}
+
+function sqrt(){
+display.value =
+Math.sqrt(
+eval(display.value)
+);
+}
+
+function power(){
+display.value =
+Math.pow(
+eval(display.value),
+2
+);
+}
+
+function sin(){
+display.value =
+Math.sin(
+eval(display.value) *
+Math.PI / 180
+).toFixed(8);
+}
+
+function cos(){
+display.value =
+Math.cos(
+eval(display.value) *
+Math.PI / 180
+).toFixed(8);
+}
+
+function tan(){
+display.value =
+Math.tan(
+eval(display.value) *
+Math.PI / 180
+).toFixed(8);
+}
+
+function log(){
+display.value =
+Math.log10(
+eval(display.value)
+).toFixed(8);
+}
+
+</script>
+
+</body>
+</html>

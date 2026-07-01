@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+EMI Calculator - Home, Car & Personal Loan EMI Calculator | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free EMI Calculator to calculate home loan, car loan and personal loan EMI instantly with monthly payment, total interest and total amount.">
+
+<meta
+name="keywords"
+content="emi calculator, loan calculator, home loan emi calculator, car loan calculator, personal loan calculator">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/emi-calculator.html">
+
+<meta property="og:title" content="EMI Calculator - ToolNest India">
+<meta property="og:description" content="Calculate loan EMI online instantly with our free EMI Calculator.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/emi-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EMI Calculator - ToolNest India">
+<meta name="twitter:description" content="Calculate loan EMI online instantly with our free EMI Calculator.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"EMI Calculator",
+"applicationCategory":"FinanceApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+EMI Calculator
+</div>
+
+<h1 class="page-title">
+EMI Calculator
+</h1>
+
+<p class="page-description">
+Calculate your monthly EMI, total interest and total payment instantly.
+</p>
+
+<div class="tool-card">
+
+<input
+type="number"
+id="loan"
+placeholder="Loan Amount (₹)"
+class="tool-input">
+
+<input
+type="number"
+id="rate"
+placeholder="Annual Interest Rate (%)"
+class="tool-input">
+
+<input
+type="number"
+id="years"
+placeholder="Loan Tenure (Years)"
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="calculateEMI()">
+Calculate EMI
+</button>
+
+<div id="emi-result">
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is an EMI Calculator?</h2>
+
+<p>
+An EMI Calculator helps you calculate your monthly loan installment,
+total interest payable and total payment amount before taking a loan.
+</p>
+
+<h2>Why Use an EMI Calculator?</h2>
+
+<ul>
+<li>Plan your finances better.</li>
+<li>Compare different loans.</li>
+<li>Know your monthly payments.</li>
+<li>Calculate interest instantly.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>What is EMI?</h3>
+<p>EMI stands for Equated Monthly Installment paid every month towards a loan.</p>
+</div>
+
+<div class="card">
+<h3>How is EMI calculated?</h3>
+<p>EMI is calculated using the loan amount, interest rate and loan tenure.</p>
+</div>
+
+<div class="card">
+<h3>Can I calculate home loan EMI?</h3>
+<p>Yes, this calculator works for home, car and personal loans.</p>
+</div>
+
+<div class="card">
+<h3>Is this EMI calculator free?</h3>
+<p>Yes, it is completely free.</p>
+</div>
+
+<div class="card">
+<h3>Can I use decimal interest rates?</h3>
+<p>Yes, for example 8.5% or 9.25%.</p>
+</div>
+
+<div class="card">
+<h3>Does this calculator store my data?</h3>
+<p>No. Everything runs in your browser.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="gst-calculator.html">GST Calculator</a></li>
+<li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+<li><a href="age-calculator.html">Age Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+function calculateEMI(){
+
+const P =
+parseFloat(
+document.getElementById(
+"loan"
+).value
+);
+
+const annualRate =
+parseFloat(
+document.getElementById(
+"rate"
+).value
+);
+
+const years =
+parseFloat(
+document.getElementById(
+"years"
+).value
+);
+
+if(
+isNaN(P) ||
+isNaN(annualRate) ||
+isNaN(years)
+){
+alert(
+"Please enter all values."
+);
+return;
+}
+
+const R =
+annualRate /
+12 /
+100;
+
+const N =
+years *
+12;
+
+const EMI =
+(
+P *
+R *
+Math.pow(
+1 + R,
+N
+)
+) /
+(
+Math.pow(
+1 + R,
+N
+) - 1
+);
+
+const totalPayment =
+EMI * N;
+
+const totalInterest =
+totalPayment - P;
+
+document.getElementById(
+"emi-result"
+).innerHTML =
+`
+<h2>
+Monthly EMI:
+₹${EMI.toFixed(2)}
+</h2>
+
+<p>
+Total Interest:
+₹${totalInterest.toFixed(2)}
+</p>
+
+<p>
+Total Payment:
+₹${totalPayment.toFixed(2)}
+</p>
+`;
+}
+
+</script>
+
+</body>
+</html>

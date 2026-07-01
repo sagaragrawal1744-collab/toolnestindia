@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Image Converter - JPG to PNG & PNG to JPG Online | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Convert JPG to PNG and PNG to JPG online for free. Fast, secure and works directly in your browser.">
+
+<meta
+name="keywords"
+content="jpg to png, png to jpg, image converter, convert image online">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/image-converter.html">
+
+<meta property="og:title" content="Image Converter - ToolNest India">
+<meta property="og:description" content="Convert JPG, PNG and other image formats online.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/image-converter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Converter - ToolNest India">
+<meta name="twitter:description" content="Convert JPG, PNG and other image formats online.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Image Converter",
+"applicationCategory":"MultimediaApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Image Converter
+</div>
+
+<h1 class="page-title">
+JPG to PNG & PNG to JPG Converter
+</h1>
+
+<p class="page-description">
+Convert image formats instantly and download your converted image.
+</p>
+
+<div class="tool-card">
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+class="tool-input">
+
+<select
+id="format"
+class="tool-input">
+
+<option value="png">
+Convert to PNG
+</option>
+
+<option value="jpeg">
+Convert to JPG
+</option>
+
+</select>
+
+<button
+class="btn-primary"
+onclick="convertImage()">
+Convert Image
+</button>
+
+<div id="imagePreview"></div>
+
+<a
+id="downloadBtn"
+class="btn-primary"
+style="display:none;text-decoration:none;">
+Download Image
+</a>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is an Image Converter?</h2>
+
+<p>
+This free online image converter allows you to convert JPG images to PNG and PNG images to JPG instantly without installing any software.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Fast image conversion.</li>
+<li>No registration required.</li>
+<li>Completely free.</li>
+<li>Secure browser processing.</li>
+<li>Works on desktop and mobile.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this image converter free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Are my images uploaded?</h3>
+<p>No. Everything happens inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Can I convert PNG to JPG?</h3>
+<p>Yes, both conversions are supported.</p>
+</div>
+
+<div class="card">
+<h3>Does it reduce image quality?</h3>
+<p>No noticeable quality loss occurs during conversion.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully responsive.</p>
+</div>
+
+<div class="card">
+<h3>Is there any file size limit?</h3>
+<p>The limit depends on your browser memory.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="image-compressor.html">Image Compressor</a></li>
+<li><a href="image-to-pdf.html">Image to PDF Converter</a></li>
+<li><a href="pdf-merger.html">PDF Merger</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+function convertImage(){
+
+const file =
+document.getElementById(
+"imageInput"
+).files[0];
+
+if(!file){
+
+alert(
+"Please select an image."
+);
+
+return;
+}
+
+const format =
+document.getElementById(
+"format"
+).value;
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(e){
+
+const img =
+new Image();
+
+img.onload =
+function(){
+
+const canvas =
+document.createElement(
+"canvas"
+);
+
+canvas.width =
+img.width;
+
+canvas.height =
+img.height;
+
+const ctx =
+canvas.getContext(
+"2d"
+);
+
+ctx.drawImage(
+img,
+0,
+0
+);
+
+const converted =
+canvas.toDataURL(
+"image/" + format
+);
+
+document.getElementById(
+"imagePreview"
+).innerHTML =
+`
+<img
+src="${converted}"
+style="
+max-width:100%;
+margin-top:20px;
+border-radius:20px;
+">
+`;
+
+const download =
+document.getElementById(
+"downloadBtn"
+);
+
+download.href =
+converted;
+
+download.download =
+"converted-image." + format;
+
+download.style.display =
+"inline-block";
+
+};
+
+img.src =
+e.target.result;
+
+};
+
+reader.readAsDataURL(
+file);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Image to PDF Converter - Convert JPG & PNG to PDF Online | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free Image to PDF Converter. Convert JPG, JPEG and PNG images into PDF files instantly online without uploading your files.">
+
+<meta
+name="keywords"
+content="image to pdf, jpg to pdf, png to pdf, photo to pdf, convert image to pdf">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/image-to-pdf.html">
+
+<meta property="og:title" content="Image to PDF Converter - ToolNest India">
+<meta property="og:description" content="Convert images to PDF online for free.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/image-to-pdf.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image to PDF Converter - ToolNest India">
+<meta name="twitter:description" content="Convert images to PDF online for free.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Image to PDF Converter",
+"applicationCategory":"DocumentApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2><li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Image to PDF Converter
+</div>
+
+<h1 class="page-title">
+Image to PDF Converter
+</h1>
+
+<p class="page-description">
+Convert JPG, JPEG and PNG images into PDF files instantly.
+</p>
+
+<div class="tool-card">
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+multiple
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="convertToPDF()">
+Convert to PDF
+</button>
+
+<div id="pdf-preview">
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is an Image to PDF Converter?</h2>
+
+<p>
+An Image to PDF Converter allows you to convert one or more images into a PDF document directly in your browser.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Create PDF documents from photos.</li>
+<li>Combine multiple images into one PDF.</li>
+<li>Useful for assignments and documents.</li>
+<li>No software installation required.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this converter free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Are my images uploaded?</h3>
+<p>No. Everything happens inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Can I convert multiple images?</h3>
+<p>Yes, you can select multiple images and combine them into one PDF.</p>
+</div>
+
+<div class="card">
+<h3>Which formats are supported?</h3>
+<p>JPG, JPEG and PNG.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, it works on both desktop and mobile devices.</p>
+</div>
+
+<div class="card">
+<h3>Is there a file size limit?</h3>
+<p>The limit depends on your browser memory.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="image-compressor.html">Image Compressor</a></li>
+<li><a href="qr-generator.html">QR Code Generator</a></li>
+<li><a href="word-counter.html">Word Counter</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+async function convertToPDF(){
+
+const files =
+document.getElementById(
+"imageInput"
+).files;
+
+if(files.length === 0){
+alert(
+"Please select at least one image."
+);
+return;
+}
+
+const {
+jsPDF
+} = window.jspdf;
+
+const pdf =
+new jsPDF();
+
+for(let i = 0; i < files.length; i++){
+
+const file =
+files[i];
+
+const reader =
+new FileReader();
+
+await new Promise(
+(resolve)=>{
+
+reader.onload =
+function(e){
+
+const img =
+new Image();
+
+img.onload =
+function(){
+
+const width =
+pdf.internal.pageSize.getWidth();
+
+const height =
+(img.height * width) /
+img.width;
+
+if(i > 0){
+pdf.addPage();
+}
+
+pdf.addImage(
+e.target.result,
+"JPEG",
+0,
+0,
+width,
+height
+);
+
+resolve();
+};
+
+img.src =
+e.target.result;
+};
+
+reader.readAsDataURL(
+file
+);
+
+});
+}
+
+pdf.save(
+"ToolNest-Images.pdf"
+);
+
+document.getElementById(
+"pdf-preview"
+).innerHTML =
+`
+<p>
+✅ PDF downloaded successfully.
+</p>
+`;
+}
+
+</script>
+
+</body>
+</html>

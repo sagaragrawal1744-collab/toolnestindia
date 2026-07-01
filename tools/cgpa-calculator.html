@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CGPA Calculator | ToolNest India</title>
+
+    <meta name="description"
+        content="Free online CGPA calculator for students. Calculate your CGPA instantly using our easy and accurate tool.">
+
+    <meta name="keywords"
+        content="CGPA Calculator, SGPA Calculator, CGPA to Percentage">
+
+    <meta name="author" content="Sagar Agrawal">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+    <link rel="canonical" href="https://toolnestindia.netlify.app/tools/cgpa-calculator.html">
+
+<meta property="og:title" content="CGPA Calculator - ToolNest India">
+<meta property="og:description" content="Calculate your CGPA and GPA online for free.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/cgpa-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CGPA Calculator - ToolNest India">
+<meta name="twitter:description" content="Calculate your CGPA and GPA online for free.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"CGPA Calculator",
+  "applicationCategory":"EducationalApplication",
+  "operatingSystem":"Any",
+  "author":{
+    "@type":"Person",
+    "name":"Sagar Agrawal"
+  }
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container-custom nav-container">
+
+          
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Tools</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container-custom">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            >
+            <a href="../index.html">Tools</a>
+            >
+            CGPA Calculator
+        </div>
+
+        <h1 class="page-title">
+            CGPA Calculator
+        </h1>
+
+        <p class="page-description">
+            Enter your SGPA of each semester to calculate your overall CGPA.
+        </p>
+
+        <div class="tool-card">
+<div class="tool-card">
+
+    <input
+        type="number"
+        id="s1"
+        placeholder="Semester 1 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s2"
+        placeholder="Semester 2 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s3"
+        placeholder="Semester 3 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s4"
+        placeholder="Semester 4 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s5"
+        placeholder="Semester 5 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s6"
+        placeholder="Semester 6 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s7"
+        placeholder="Semester 7 SGPA"
+        class="tool-input">
+
+    <input
+        type="number"
+        id="s8"
+        placeholder="Semester 8 SGPA"
+        class="tool-input">
+
+    <button
+        class="btn-primary"
+        onclick="calculateCGPA()">
+        Calculate CGPA
+    </button>
+
+    <h2 id="result"></h2>
+
+</div>
+        </div>
+
+        <!-- About Tool -->
+        <section class="tool-content">
+
+            <h2>What is a CGPA Calculator?</h2>
+
+            <p>
+
+                A CGPA Calculator helps students calculate their overall
+                cumulative grade point average by averaging the SGPA of
+                all semesters.
+
+            </p>
+
+            <h2> How to Use? </h2>
+
+            <ol>
+                <li>Enter your SGPA for each semester.</li>
+                <li>Click Calculate CGPA.</li>
+                <li>Your final CGPA will be shown instantly.</li>
+            </ol>
+
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+
+            <h2>Frequently Asked Questions</h2>
+
+           <section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="card">
+        <h3 class="faq-question">
+            Is this calculator free?
+        </h3>
+
+        <div class="faq-answer">
+            Yes, this calculator is completely free.
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="faq-question">
+            Is my data stored?
+        </h3>
+
+        <div class="faq-answer">
+            No. Everything runs in your browser and nothing is saved.
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="faq-question">
+            Can I use this for AKTU?
+        </h3>
+
+        <div class="faq-answer">
+            Yes, you can use it for AKTU and most universities.
+        </div>
+    </div>
+
+</section>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container-custom">
+            © 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+        </div>
+    </footer>
+    <section class="tool-content">
+
+    <h2>Related Tools</h2>
+
+    <ul>
+        <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+    </ul>
+
+</section>
+
+    <script>
+
+        function calculateCGPA() {
+
+            let total = 0;
+            let count = 0;
+
+            for (let i = 1; i <= 8; i++) {
+
+                let value = parseFloat(
+                    document.getElementById(`s${i}`).value
+                );
+
+                if (!isNaN(value)) {
+                    total += value;
+                    count++;
+                }
+            }
+
+            if (count === 0) {
+                document.getElementById("result")
+                    .innerHTML = "Please enter SGPA values.";
+                return;
+            }
+
+            const cgpa = (total / count).toFixed(2);
+
+            document.getElementById("result")
+                .innerHTML =
+                `Your CGPA is ${cgpa}`;
+        }
+
+    </script>
+<script src="../assets/js/faq.js"></script>
+</body>
+</html>

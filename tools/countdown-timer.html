@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Countdown Timer - Event & Exam Countdown Online | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Create a countdown timer for exams, birthdays, events and important dates online for free.">
+
+<meta
+name="keywords"
+content="countdown timer, exam countdown, event countdown, birthday countdown">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/countdown-timer.html">
+
+<meta property="og:title" content="Countdown Timer - ToolNest India">
+<meta property="og:description" content="Set and run a free online countdown timer.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/countdown-timer.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Countdown Timer - ToolNest India">
+<meta name="twitter:description" content="Set and run a free online countdown timer.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Countdown Timer",
+"applicationCategory":"UtilityApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Countdown Timer
+</div>
+
+<h1 class="page-title">
+Countdown Timer
+</h1>
+
+<p class="page-description">
+Create a countdown for your exams, birthdays, events and special dates.
+</p>
+
+<div class="tool-card">
+
+<input
+type="text"
+id="eventName"
+class="tool-input"
+placeholder="Enter Event Name">
+
+<input
+type="datetime-local"
+id="eventDate"
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="startCountdown()">
+Start Countdown
+</button>
+
+<div id="countdownResult">
+
+<div class="count-box">
+<span id="days">0</span>
+<p>Days</p>
+</div>
+
+<div class="count-box">
+<span id="hours">0</span>
+<p>Hours</p>
+</div>
+
+<div class="count-box">
+<span id="minutes">0</span>
+<p>Minutes</p>
+</div>
+
+<div class="count-box">
+<span id="seconds">0</span>
+<p>Seconds</p>
+</div>
+
+</div>
+
+<h2 id="eventTitle"></h2>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a Countdown Timer?</h2>
+
+<p>
+A countdown timer calculates the remaining time until a specific event or date.
+</p>
+
+<h2>Popular Uses</h2>
+
+<ul>
+<li>Exam countdown.</li>
+<li>Birthday countdown.</li>
+<li>New year countdown.</li>
+<li>Project deadline countdown.</li>
+<li>Wedding countdown.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this countdown timer free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Can I use it for exams?</h3>
+<p>Yes, it is perfect for exam preparation.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully responsive.</p>
+</div>
+
+<div class="card">
+<h3>Can I create multiple countdowns?</h3>
+<p>Yes, simply create another countdown.</p>
+</div>
+
+<div class="card">
+<h3>Is my data stored?</h3>
+<p>No. Nothing is stored on our servers.</p>
+</div>
+
+<div class="card">
+<h3>Does it update automatically?</h3>
+<p>Yes, every second.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="date-calculator.html">Date Calculator</a></li>
+<li><a href="age-calculator.html">Age Calculator</a></li>
+<li><a href="scientific-calculator.html">Scientific Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+let timer;
+
+function startCountdown(){
+
+clearInterval(timer);
+
+const eventName =
+document.getElementById(
+"eventName"
+).value;
+
+const targetDate =
+new Date(
+document.getElementById(
+"eventDate"
+).value
+);
+
+if(!targetDate.getTime()){
+alert("Please select a date.");
+return;
+}
+
+document.getElementById(
+"eventTitle"
+).innerText =
+eventName || "Your Event";
+
+timer = setInterval(function(){
+
+const now =
+new Date().getTime();
+
+const distance =
+targetDate - now;
+
+if(distance < 0){
+
+clearInterval(timer);
+
+document.getElementById(
+"countdownResult"
+).innerHTML =
+"<h2>🎉 Event Started!</h2>";
+
+return;
+}
+
+const days =
+Math.floor(
+distance /
+(1000*60*60*24)
+);
+
+const hours =
+Math.floor(
+(distance %
+(1000*60*60*24)) /
+(1000*60*60)
+);
+
+const minutes =
+Math.floor(
+(distance %
+(1000*60*60)) /
+(1000*60)
+);
+
+const seconds =
+Math.floor(
+(distance %
+(1000*60)) /
+1000
+);
+
+document.getElementById(
+"days"
+).innerText =
+days;
+
+document.getElementById(
+"hours"
+).innerText =
+hours;
+
+document.getElementById(
+"minutes"
+).innerText =
+minutes;
+
+document.getElementById(
+"seconds"
+).innerText =
+seconds;
+
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>

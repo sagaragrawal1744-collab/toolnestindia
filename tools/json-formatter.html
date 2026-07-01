@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        JSON Formatter & Validator Online | ToolNest India
+    </title>
+
+    <meta
+        name="description"
+        content="Free online JSON Formatter and Validator. Beautify, validate and minify JSON instantly.">
+
+    <meta
+        name="keywords"
+        content="json formatter, json validator, json beautifier, json parser">
+
+    <meta
+        name="author"
+        content="Sagar Agrawal">
+        
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/json-formatter.html">
+
+<meta property="og:title" content="JSON Formatter - ToolNest India">
+<meta property="og:description" content="Format, beautify and validate JSON online for free.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/json-formatter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JSON Formatter - ToolNest India">
+<meta name="twitter:description" content="Format, beautify and validate JSON online for free.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"JSON Formatter",
+      "applicationCategory":"DeveloperApplication",
+      "author":{
+        "@type":"Person",
+        "name":"Sagar Agrawal"
+      }
+    }
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container-custom nav-container">
+
+      
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container-custom">
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        >
+        <a href="../index.html">Tools</a>
+        >
+        JSON Formatter
+    </div>
+
+    <h1 class="page-title">
+        JSON Formatter & Validator
+    </h1>
+
+    <p class="page-description">
+        Beautify, validate and minify JSON instantly.
+    </p>
+
+    <div class="tool-card">
+
+        <textarea
+            id="jsonInput"
+            class="tool-textarea"
+            placeholder="Paste your JSON here..."></textarea>
+
+        <div style="
+            margin-top:20px;
+            display:flex;
+            gap:15px;
+            flex-wrap:wrap;
+        ">
+
+            <button
+                class="btn-primary"
+                onclick="formatJSON()">
+                Format JSON
+            </button>
+
+            <button
+                class="btn-primary"
+                onclick="minifyJSON()">
+                Minify JSON
+            </button>
+
+            <button
+                class="btn-primary"
+                onclick="copyJSON()">
+                Copy JSON
+            </button>
+
+        </div>
+
+        <div
+            id="jsonStatus"
+            style="margin-top:20px;">
+        </div>
+
+    </div>
+
+    <section class="tool-content">
+
+        <h2>What is JSON Formatter?</h2>
+
+        <p>
+            JSON Formatter helps developers beautify and validate JSON data
+            making it easier to read and debug.
+        </p>
+
+        <h2>Why Use It?</h2>
+
+        <ul>
+            <li>Improves readability.</li>
+            <li>Validates JSON syntax.</li>
+            <li>Useful for APIs and debugging.</li>
+            <li>Completely free and secure.</li>
+        </ul>
+
+    </section>
+
+    <section class="faq">
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+        <div class="card">
+            <h3>Is my JSON stored?</h3>
+            <p>No. Everything runs in your browser.</p>
+        </div>
+
+        <div class="card">
+            <h3>Can I format large JSON files?</h3>
+            <p>Yes, as long as your browser can handle them.</p>
+        </div>
+
+        <div class="card">
+            <h3>Does it validate JSON?</h3>
+            <p>Yes, invalid JSON will show an error.</p>
+        </div>
+
+    </section>
+
+    <section class="tool-content">
+
+        <h2>Related Tools</h2>
+
+        <ul>
+            <li><a href="password-generator.html">Password Generator</a></li>
+            <li><a href="qr-generator.html">QR Generator</a></li>
+            <li><a href="word-counter.html">Word Counter</a></li>
+        </ul>
+
+    </section>
+
+</div>
+
+<footer>
+    <div class="container-custom">
+        © 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+    </div>
+</footer>
+
+<script>
+
+function formatJSON(){
+
+    const input =
+        document.getElementById(
+            "jsonInput"
+        );
+
+    const status =
+        document.getElementById(
+            "jsonStatus"
+        );
+
+    try{
+
+        const parsed =
+            JSON.parse(
+                input.value
+            );
+
+        input.value =
+            JSON.stringify(
+                parsed,
+                null,
+                4
+            );
+
+        status.innerHTML =
+            "✅ Valid JSON";
+
+    }
+    catch(error){
+
+        status.innerHTML =
+            "❌ Invalid JSON";
+    }
+}
+
+function minifyJSON(){
+
+    const input =
+        document.getElementById(
+            "jsonInput"
+        );
+
+    const status =
+        document.getElementById(
+            "jsonStatus"
+        );
+
+    try{
+
+        const parsed =
+            JSON.parse(
+                input.value
+            );
+
+        input.value =
+            JSON.stringify(
+                parsed
+            );
+
+        status.innerHTML =
+            "✅ JSON Minified";
+
+    }
+    catch(error){
+
+        status.innerHTML =
+            "❌ Invalid JSON";
+    }
+}
+
+function copyJSON(){
+
+    const input =
+        document.getElementById(
+            "jsonInput"
+        );
+
+    navigator.clipboard.writeText(
+        input.value
+    );
+
+    alert(
+        "JSON copied!"
+    );
+}
+
+</script>
+
+</body>
+</html>

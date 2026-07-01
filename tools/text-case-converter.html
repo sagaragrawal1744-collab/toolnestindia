@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Text Case Converter - Uppercase, Lowercase & Title Case Converter | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free Text Case Converter. Convert text to uppercase, lowercase, title case, sentence case and capitalize text instantly.">
+
+<meta
+name="keywords"
+content="text case converter, uppercase converter, lowercase converter, title case converter, sentence case converter">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/text-case-converter.html">
+
+<meta property="og:title" content="Text Case Converter - ToolNest India">
+<meta property="og:description" content="Convert text to uppercase, lowercase and title case instantly.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/text-case-converter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text Case Converter - ToolNest India">
+<meta name="twitter:description" content="Convert text to uppercase, lowercase and title case instantly.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Text Case Converter",
+"applicationCategory":"UtilityApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Text Case Converter
+</div>
+
+<h1 class="page-title">
+Text Case Converter
+</h1>
+
+<p class="page-description">
+Convert text to uppercase, lowercase, title case and sentence case instantly.
+</p>
+
+<div class="tool-card">
+
+<textarea
+id="textInput"
+class="tool-input"
+rows="8"
+placeholder="Type or paste your text here..."></textarea>
+
+<div class="case-buttons">
+
+<button class="btn-primary" onclick="toUpper()">
+UPPERCASE
+</button>
+
+<button class="btn-primary" onclick="toLower()">
+lowercase
+</button>
+
+<button class="btn-primary" onclick="toTitle()">
+Title Case
+</button>
+
+<button class="btn-primary" onclick="toSentence()">
+Sentence case
+</button>
+
+<button class="btn-primary" onclick="copyText()">
+Copy Text
+</button>
+
+<button class="btn-primary" onclick="clearText()">
+Clear
+</button>
+
+</div>
+
+<div id="textStats">
+
+<p>Words: <span id="words">0</span></p>
+<p>Characters: <span id="characters">0</span></p>
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a Text Case Converter?</h2>
+
+<p>
+A Text Case Converter allows you to change the capitalization of text instantly without manually editing it.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Convert text instantly.</li>
+<li>Useful for writers and students.</li>
+<li>Create titles quickly.</li>
+<li>Prepare professional documents.</li>
+<li>Completely free and secure.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this converter free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Is my text stored?</h3>
+<p>No. Everything runs in your browser.</p>
+</div>
+
+<div class="card">
+<h3>Can I convert large text?</h3>
+<p>Yes, you can paste large paragraphs.</p>
+</div>
+
+<div class="card">
+<h3>Can I copy converted text?</h3>
+<p>Yes, one click copies your text.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully responsive.</p>
+</div>
+
+<div class="card">
+<h3>What case formats are supported?</h3>
+<p>Uppercase, lowercase, title case and sentence case.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="word-counter.html">Word Counter</a></li>
+<li><a href="json-formatter.html">JSON Formatter</a></li>
+<li><a href="password-generator.html">Password Generator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+const input =
+document.getElementById(
+"textInput"
+);
+
+input.addEventListener(
+"input",
+updateStats
+);
+
+function updateStats(){
+
+const text =
+input.value;
+
+document.getElementById(
+"characters"
+).innerText =
+text.length;
+
+document.getElementById(
+"words"
+).innerText =
+text.trim() === ""
+? 0
+: text.trim().split(/\s+/).length;
+
+}
+
+function toUpper(){
+input.value =
+input.value.toUpperCase();
+updateStats();
+}
+
+function toLower(){
+input.value =
+input.value.toLowerCase();
+updateStats();
+}
+
+function toTitle(){
+
+input.value =
+input.value.toLowerCase().replace(
+/\b\w/g,
+c => c.toUpperCase()
+);
+
+updateStats();
+}
+
+function toSentence(){
+
+let text =
+input.value.toLowerCase();
+
+input.value =
+text.charAt(0).toUpperCase() +
+text.slice(1);
+
+updateStats();
+}
+
+function copyText(){
+
+navigator.clipboard.writeText(
+input.value
+);
+
+alert(
+"Text copied successfully."
+);
+
+}
+
+function clearText(){
+
+input.value = "";
+updateStats();
+
+}
+
+</script>
+
+</body>
+</html>

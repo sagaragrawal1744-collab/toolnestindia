@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Unit Converter - Length, Weight & Temperature Converter | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free Unit Converter for length, weight and temperature. Convert cm to inch, kg to lbs, Celsius to Fahrenheit and more instantly.">
+
+<meta
+name="keywords"
+content="unit converter, cm to inch, kg to lbs, celsius to fahrenheit, feet to meter">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/unit-converter.html">
+
+<meta property="og:title" content="Unit Converter - ToolNest India">
+<meta property="og:description" content="Convert length, weight, temperature and other units online.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/unit-converter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unit Converter - ToolNest India">
+<meta name="twitter:description" content="Convert length, weight, temperature and other units online.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"Unit Converter",
+"applicationCategory":"UtilityApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+Unit Converter
+</div>
+
+<h1 class="page-title">
+Unit Converter
+</h1>
+
+<p class="page-description">
+Convert length, weight and temperature instantly.
+</p>
+
+<div class="tool-card">
+
+<select
+id="category"
+class="tool-input"
+onchange="loadUnits()">
+
+<option value="length">
+Length
+</option>
+
+<option value="weight">
+Weight
+</option>
+
+<option value="temperature">
+Temperature
+</option>
+
+</select>
+
+<input
+type="number"
+id="inputValue"
+placeholder="Enter Value"
+class="tool-input">
+
+<select
+id="fromUnit"
+class="tool-input">
+</select>
+
+<select
+id="toUnit"
+class="tool-input">
+</select>
+
+<button
+class="btn-primary"
+onclick="convertUnit()">
+Convert
+</button>
+
+<div id="unit-result">
+
+</div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a Unit Converter?</h2>
+
+<p>
+A Unit Converter allows you to quickly convert values between different measurement units.
+</p>
+
+<h2>Supported Conversions</h2>
+
+<ul>
+<li>Centimeters to Inches</li>
+<li>Feet to Meters</li>
+<li>Kilograms to Pounds</li>
+<li>Celsius to Fahrenheit</li>
+<li>And many more.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this converter free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>How accurate are the conversions?</h3>
+<p>The tool uses standard conversion formulas and is highly accurate.</p>
+</div>
+
+<div class="card">
+<h3>Can I convert temperature?</h3>
+<p>Yes, Celsius and Fahrenheit conversions are supported.</p>
+</div>
+
+<div class="card">
+<h3>Can I use decimal values?</h3>
+<p>Yes, decimals are fully supported.</p>
+</div>
+
+<div class="card">
+<h3>Is my data stored?</h3>
+<p>No. Everything runs inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, it is fully responsive.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="date-calculator.html">Date Calculator</a></li>
+<li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+<li><a href="age-calculator.html">Age Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+const units = {
+
+length: [
+"Centimeter",
+"Inch",
+"Meter",
+"Feet"
+],
+
+weight: [
+"Kilogram",
+"Pound"
+],
+
+temperature: [
+"Celsius",
+"Fahrenheit"
+]
+
+};
+
+function loadUnits(){
+
+const category =
+document.getElementById(
+"category"
+).value;
+
+const from =
+document.getElementById(
+"fromUnit"
+);
+
+const to =
+document.getElementById(
+"toUnit"
+);
+
+from.innerHTML = "";
+to.innerHTML = "";
+
+units[category].forEach(
+unit => {
+
+from.innerHTML +=
+`<option>${unit}</option>`;
+
+to.innerHTML +=
+`<option>${unit}</option>`;
+
+});
+
+}
+
+loadUnits();
+
+function convertUnit(){
+
+const value =
+parseFloat(
+document.getElementById(
+"inputValue"
+).value
+);
+
+if(isNaN(value)){
+alert(
+"Please enter a value."
+);
+return;
+}
+
+const category =
+document.getElementById(
+"category"
+).value;
+
+const from =
+document.getElementById(
+"fromUnit"
+).value;
+
+const to =
+document.getElementById(
+"toUnit"
+).value;
+
+let result = value;
+
+if(category === "length"){
+
+let meters;
+
+if(from === "Centimeter")
+meters = value / 100;
+
+if(from === "Inch")
+meters = value * 0.0254;
+
+if(from === "Feet")
+meters = value * 0.3048;
+
+if(from === "Meter")
+meters = value;
+
+if(to === "Centimeter")
+result = meters * 100;
+
+if(to === "Inch")
+result = meters / 0.0254;
+
+if(to === "Feet")
+result = meters / 0.3048;
+
+if(to === "Meter")
+result = meters;
+
+}
+
+if(category === "weight"){
+
+let kg;
+
+if(from === "Kilogram")
+kg = value;
+
+if(from === "Pound")
+kg = value * 0.453592;
+
+if(to === "Kilogram")
+result = kg;
+
+if(to === "Pound")
+result = kg / 0.453592;
+
+}
+
+if(category === "temperature"){
+
+if(from === "Celsius" &&
+to === "Fahrenheit")
+result = (value * 9/5) + 32;
+
+else if(from === "Fahrenheit" &&
+to === "Celsius")
+result = (value - 32) * 5/9;
+
+else
+result = value;
+
+}
+
+document.getElementById(
+"unit-result"
+).innerHTML =
+`
+<h2>
+${value} ${from}
+</h2>
+
+<p>
+=
+</p>
+
+<h2>
+${result.toFixed(4)} ${to}
+</h2>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

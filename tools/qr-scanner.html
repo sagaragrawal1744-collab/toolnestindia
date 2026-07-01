@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+QR Scanner - Scan QR Code from Image Online | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free QR Scanner online. Scan and decode QR codes directly from images without uploading files.">
+
+<meta
+name="keywords"
+content="qr scanner, qr code reader, scan qr code online, qr decoder">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/qr-scanner.html">
+
+<meta property="og:title" content="QR Scanner - ToolNest India">
+<meta property="og:description" content="Scan QR codes online using your device camera.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/qr-scanner.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QR Scanner - ToolNest India">
+<meta name="twitter:description" content="Scan QR codes online using your device camera.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"QR Scanner",
+"applicationCategory":"UtilityApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+QR Scanner
+</div>
+
+<h1 class="page-title">
+QR Scanner
+</h1>
+
+<p class="page-description">
+Upload a QR code image and decode it instantly.
+</p>
+
+<div class="tool-card">
+
+<input
+type="file"
+id="qrInput"
+accept="image/*"
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="scanQR()">
+Scan QR Code
+</button>
+
+<div id="qrResult"></div>
+
+<canvas
+id="canvas"
+style="display:none;">
+</canvas>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a QR Scanner?</h2>
+
+<p>
+A QR Scanner reads and decodes QR codes from images instantly inside your browser.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Scan QR codes without an app.</li>
+<li>No file uploads required.</li>
+<li>Completely private.</li>
+<li>Works on desktop and mobile.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this QR scanner free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Are my images uploaded?</h3>
+<p>No. Everything happens inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Can I scan QR codes from screenshots?</h3>
+<p>Yes, screenshots work perfectly.</p>
+</div>
+
+<div class="card">
+<h3>Can I scan URLs and WiFi QR codes?</h3>
+<p>Yes, any standard QR code is supported.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, fully mobile responsive.</p>
+</div>
+
+<div class="card">
+<h3>Is my data stored?</h3>
+<p>No, no data is stored.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="qr-generator.html">QR Generator</a></li>
+<li><a href="image-compressor.html">Image Compressor</a></li>
+<li><a href="text-case-converter.html">Text Case Converter</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+function scanQR(){
+
+const file =
+document.getElementById(
+"qrInput"
+).files[0];
+
+if(!file){
+alert(
+"Please select an image."
+);
+return;
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(e){
+
+const img =
+new Image();
+
+img.onload =
+function(){
+
+const canvas =
+document.getElementById(
+"canvas"
+);
+
+const ctx =
+canvas.getContext(
+"2d"
+);
+
+canvas.width =
+img.width;
+
+canvas.height =
+img.height;
+
+ctx.drawImage(
+img,
+0,
+0
+);
+
+const imageData =
+ctx.getImageData(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+const code =
+jsQR(
+imageData.data,
+imageData.width,
+imageData.height
+);
+
+if(code){
+
+document.getElementById(
+"qrResult"
+).innerHTML =
+`
+<h2>QR Content</h2>
+
+<textarea
+class="tool-input"
+rows="4"
+readonly>${code.data}</textarea>
+
+<button
+class="btn-primary"
+onclick="navigator.clipboard.writeText('${code.data}')">
+Copy Result
+</button>
+`;
+
+}
+else{
+
+document.getElementById(
+"qrResult"
+).innerHTML =
+`
+<p>
+No QR code found.
+</p>
+`;
+
+}
+
+};
+
+img.src =
+e.target.result;
+
+};
+
+reader.readAsDataURL(
+file
+);
+
+}
+
+</script>
+
+</body>
+</html>

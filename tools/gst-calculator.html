@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+GST Calculator - Calculate GST Online in India | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Free GST Calculator India. Calculate GST inclusive and exclusive amounts instantly for 5%, 12%, 18% and 28% GST rates.">
+
+<meta
+name="keywords"
+content="gst calculator, gst calculator india, gst inclusive calculator, gst exclusive calculator">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/gst-calculator.html">
+
+<meta property="og:title" content="GST Calculator - ToolNest India">
+<meta property="og:description" content="Calculate GST online for free with our GST Calculator.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/gst-calculator.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GST Calculator - ToolNest India">
+<meta name="twitter:description" content="Calculate GST online for free with our GST Calculator.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"GST Calculator",
+"applicationCategory":"FinanceApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+GST Calculator
+</div>
+
+<h1 class="page-title">
+GST Calculator
+</h1>
+
+<p class="page-description">
+Calculate GST amounts instantly with inclusive and exclusive modes.
+</p>
+
+<div class="tool-card">
+
+<input
+type="number"
+id="amount"
+placeholder="Enter Amount (₹)"
+class="tool-input">
+
+<select
+id="gstRate"
+class="tool-input">
+
+<option value="5">5% GST</option>
+<option value="12">12% GST</option>
+<option value="18" selected>18% GST</option>
+<option value="28">28% GST</option>
+
+</select>
+
+<select
+id="gstType"
+class="tool-input">
+
+<option value="exclusive">
+Add GST (Exclusive)
+</option>
+
+<option value="inclusive">
+Remove GST (Inclusive)
+</option>
+
+</select>
+
+<button
+class="btn-primary"
+onclick="calculateGST()">
+Calculate GST
+</button>
+
+<div id="gst-result"></div>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is GST Calculator?</h2>
+
+<p>
+GST Calculator helps you calculate Goods and Services Tax (GST) payable on products and services in India.
+</p>
+
+<h2>What is GST?</h2>
+
+<p>
+GST (Goods and Services Tax) is an indirect tax imposed on the supply of goods and services in India.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Calculate GST instantly.</li>
+<li>Supports inclusive and exclusive GST.</li>
+<li>Useful for businesses and freelancers.</li>
+<li>Works for all major GST slabs.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>What is GST?</h3>
+<p>GST stands for Goods and Services Tax introduced in India in 2017.</p>
+</div>
+
+<div class="card">
+<h3>What are the common GST rates?</h3>
+<p>The common GST slabs are 5%, 12%, 18% and 28%.</p>
+</div>
+
+<div class="card">
+<h3>What is GST inclusive amount?</h3>
+<p>Inclusive means GST is already included in the amount.</p>
+</div>
+
+<div class="card">
+<h3>What is GST exclusive amount?</h3>
+<p>Exclusive means GST needs to be added to the amount.</p>
+</div>
+
+<div class="card">
+<h3>Is this calculator free?</h3>
+<p>Yes, it is completely free.</p>
+</div>
+
+<div class="card">
+<h3>Is my data stored?</h3>
+<p>No. Everything runs inside your browser.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="emi-calculator.html">EMI Calculator</a></li>
+<li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+<li><a href="age-calculator.html">Age Calculator</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+function calculateGST(){
+
+const amount =
+parseFloat(
+document.getElementById(
+"amount"
+).value
+);
+
+const rate =
+parseFloat(
+document.getElementById(
+"gstRate"
+).value
+);
+
+const type =
+document.getElementById(
+"gstType"
+).value;
+
+if(
+isNaN(amount) ||
+amount <= 0
+){
+alert(
+"Please enter a valid amount."
+);
+return;
+}
+
+let gst;
+let total;
+let original;
+
+if(type === "exclusive"){
+
+gst =
+(amount * rate) / 100;
+
+total =
+amount + gst;
+
+original =
+amount;
+
+}
+else{
+
+original =
+(amount * 100) /
+(100 + rate);
+
+gst =
+amount - original;
+
+total =
+amount;
+
+}
+
+document.getElementById(
+"gst-result"
+).innerHTML =
+`
+<h2>Total Amount: ₹${total.toFixed(2)}</h2>
+
+<p>Original Amount: ₹${original.toFixed(2)}</p>
+
+<p>GST Amount: ₹${gst.toFixed(2)}</p>
+`;
+}
+
+</script>
+
+</body>
+</html>

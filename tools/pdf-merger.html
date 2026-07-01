@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+PDF Merger - Merge PDF Files Online for Free | ToolNest India
+</title>
+
+<meta
+name="description"
+content="Merge multiple PDF files into one PDF online for free. No uploads required. Everything works inside your browser.">
+
+<meta
+name="keywords"
+content="pdf merger, merge pdf, combine pdf, join pdf online">
+
+<meta
+name="author"
+content="Sagar Agrawal">
+<link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/pdf-merger.html">
+
+<meta property="og:title" content="PDF Merger - ToolNest India">
+<meta property="og:description" content="Merge multiple PDF files online quickly and securely.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/pdf-merger.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PDF Merger - ToolNest India">
+<meta name="twitter:description" content="Merge multiple PDF files online quickly and securely.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script src="https://unpkg.com/pdf-lib"></script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"PDF Merger",
+"applicationCategory":"DocumentApplication",
+"author":{
+"@type":"Person",
+"name":"Sagar Agrawal"
+}
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+<div class="container-custom nav-container">
+
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html">Tools</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<div class="container-custom">
+
+<div class="breadcrumb">
+<a href="../index.html">Home</a>
+>
+<a href="../index.html">Tools</a>
+>
+PDF Merger
+</div>
+
+<h1 class="page-title">
+PDF Merger
+</h1>
+
+<p class="page-description">
+Combine multiple PDF files into a single PDF instantly.
+</p>
+
+<div class="tool-card">
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf"
+multiple
+class="tool-input">
+
+<button
+class="btn-primary"
+onclick="mergePDFs()">
+Merge PDFs
+</button>
+
+<div id="mergeResult"></div>
+
+<a
+id="downloadPDF"
+class="btn-primary"
+style="display:none;text-decoration:none;">
+Download Merged PDF
+</a>
+
+</div>
+
+<section class="tool-content">
+
+<h2>What is a PDF Merger?</h2>
+
+<p>
+A PDF Merger combines multiple PDF documents into one single PDF file directly in your browser.
+</p>
+
+<h2>Why Use This Tool?</h2>
+
+<ul>
+<li>Combine assignments into one file.</li>
+<li>Merge invoices and reports.</li>
+<li>No software installation required.</li>
+<li>No file uploads or privacy concerns.</li>
+</ul>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="card">
+<h3>Is this PDF merger free?</h3>
+<p>Yes, completely free.</p>
+</div>
+
+<div class="card">
+<h3>Are my PDFs uploaded?</h3>
+<p>No. Everything happens inside your browser.</p>
+</div>
+
+<div class="card">
+<h3>Can I merge more than two PDFs?</h3>
+<p>Yes, you can merge multiple PDF files.</p>
+</div>
+
+<div class="card">
+<h3>Does it work on mobile?</h3>
+<p>Yes, it works on both desktop and mobile.</p>
+</div>
+
+<div class="card">
+<h3>Is there a file size limit?</h3>
+<p>The limit depends on your device memory.</p>
+</div>
+
+<div class="card">
+<h3>Will my PDF quality change?</h3>
+<p>No, the original PDF quality is preserved.</p>
+</div>
+
+</section>
+
+<section class="tool-content">
+
+<h2>Related Tools</h2>
+
+<ul>
+<li><a href="image-to-pdf.html">Image to PDF Converter</a></li>
+<li><a href="image-compressor.html">Image Compressor</a></li>
+<li><a href="qr-scanner.html">QR Scanner</a></li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+<div class="container-custom">
+© 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+</div>
+</footer>
+
+<script>
+
+async function mergePDFs(){
+
+const files =
+document.getElementById(
+"pdfInput"
+).files;
+
+if(files.length < 2){
+
+alert(
+"Please select at least two PDF files."
+);
+
+return;
+}
+
+const mergedPdf =
+await PDFLib.PDFDocument.create();
+
+for(const file of files){
+
+const bytes =
+await file.arrayBuffer();
+
+const pdf =
+await PDFLib.PDFDocument.load(
+bytes
+);
+
+const pages =
+await mergedPdf.copyPages(
+pdf,
+pdf.getPageIndices()
+);
+
+pages.forEach(
+page => mergedPdf.addPage(page)
+);
+
+}
+
+const mergedBytes =
+await mergedPdf.save();
+
+const blob =
+new Blob(
+[mergedBytes],
+{
+type:"application/pdf"
+}
+);
+
+const url =
+URL.createObjectURL(
+blob
+);
+
+document.getElementById(
+"downloadPDF"
+).href = url;
+
+document.getElementById(
+"downloadPDF"
+).download =
+"ToolNest-Merged.pdf";
+
+document.getElementById(
+"downloadPDF"
+).style.display =
+"inline-block";
+
+document.getElementById(
+"mergeResult"
+).innerHTML =
+`
+<p>
+✅ PDFs merged successfully.
+</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

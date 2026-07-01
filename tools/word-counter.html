@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Free Word Counter & Character Counter | ToolNest India
+    </title>
+
+    <meta
+        name="description"
+        content="Free online word counter, character counter, sentence counter and paragraph counter. Perfect for students, bloggers and writers.">
+
+    <meta
+        name="keywords"
+        content="word counter, character counter, sentence counter, paragraph counter">
+
+    <meta
+        name="author"
+        content="Sagar Agrawal">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="canonical" href="https://toolnestindia.netlify.app/tools/word-counter.html">
+
+<meta property="og:title" content="Word Counter - ToolNest India">
+<meta property="og:description" content="Count words, characters and sentences online instantly.">
+<meta property="og:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolnestindia.netlify.app/tools/word-counter.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Word Counter - ToolNest India">
+<meta name="twitter:description" content="Count words, characters and sentences online instantly.">
+<meta name="twitter:image" content="https://toolnestindia.netlify.app/assets/images/og-image.webp">
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"Word Counter",
+      "applicationCategory":"UtilityApplication",
+      "author":{
+        "@type":"Person",
+        "name":"Sagar Agrawal"
+      }
+    }
+    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNYR8QLRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TTNYR8QLRV');
+</script></head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container-custom nav-container">
+
+       <h2 class="logo">
+<a href="../index.html">
+<img
+src="../assets/images/toolnestlogo.png"
+alt="ToolNest India Logo"
+class="site-logo">
+</a>
+</h2>
+<li>
+<a href="../blog/index.html">
+Blog
+</a>
+</li>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container-custom">
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        >
+        <a href="../index.html">Tools</a>
+        >
+        Word Counter
+    </div>
+
+    <h1 class="page-title">
+        Word Counter & Character Counter
+    </h1>
+
+    <p class="page-description">
+        Count words, characters, sentences and paragraphs instantly.
+    </p>
+
+    <div class="tool-card">
+
+        <textarea
+            id="text"
+            class="tool-textarea"
+            placeholder="Type or paste your text here..."
+            oninput="countText()"></textarea>
+
+        <div class="stats-grid">
+
+            <div class="card">
+                <h2 id="words">0</h2>
+                <p>Words</p>
+            </div>
+
+            <div class="card">
+                <h2 id="characters">0</h2>
+                <p>Characters</p>
+            </div>
+
+            <div class="card">
+                <h2 id="sentences">0</h2>
+                <p>Sentences</p>
+            </div>
+
+            <div class="card">
+                <h2 id="paragraphs">0</h2>
+                <p>Paragraphs</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="tool-content">
+
+        <h2>What is a Word Counter?</h2>
+
+        <p>
+            A Word Counter is an online tool that counts the number of words,
+            characters, sentences and paragraphs in your text instantly.
+        </p>
+
+        <h2>Who Uses It?</h2>
+
+        <ul>
+            <li>Students writing assignments.</li>
+            <li>Bloggers creating articles.</li>
+            <li>Writers and authors.</li>
+            <li>SEO professionals.</li>
+        </ul>
+
+    </section>
+
+    <section class="faq">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="card">
+            <h3>Is this tool free?</h3>
+            <p>Yes, completely free.</p>
+        </div>
+
+        <div class="card">
+            <h3>Is my text saved?</h3>
+            <p>No. Everything happens inside your browser.</p>
+        </div>
+
+        <div class="card">
+            <h3>Can I use it for essays?</h3>
+            <p>Yes. It is perfect for essays and assignments.</p>
+        </div>
+
+    </section>
+
+    <section class="tool-content">
+
+        <h2>Related Tools</h2>
+
+        <ul>
+            <li><a href="password-generator.html">Password Generator</a></li>
+            <li><a href="qr-generator.html">QR Code Generator</a></li>
+            <li><a href="json-formatter.html">JSON Formatter</a></li>
+        </ul>
+
+    </section>
+
+</div>
+
+<footer>
+    <div class="container-custom">
+        © 2026 ToolNest India | Built with ❤️ by Sagar Agrawal
+    </div>
+</footer>
+
+<script>
+
+function countText(){
+
+    const text =
+        document.getElementById(
+            "text"
+        ).value;
+
+    const words =
+        text.trim() === ""
+        ? 0
+        : text.trim().split(/\s+/).length;
+
+    const characters =
+        text.length;
+
+    const sentences =
+        text.trim() === ""
+        ? 0
+        : text.split(/[.!?]+/)
+              .filter(
+                  s => s.trim() !== ""
+              ).length;
+
+    const paragraphs =
+        text.trim() === ""
+        ? 0
+        : text.split(/\n+/)
+              .filter(
+                  p => p.trim() !== ""
+              ).length;
+
+    document.getElementById(
+        "words"
+    ).innerText = words;
+
+    document.getElementById(
+        "characters"
+    ).innerText = characters;
+
+    document.getElementById(
+        "sentences"
+    ).innerText = sentences;
+
+    document.getElementById(
+        "paragraphs"
+    ).innerText = paragraphs;
+}
+
+</script>
+
+</body>
+</html>
